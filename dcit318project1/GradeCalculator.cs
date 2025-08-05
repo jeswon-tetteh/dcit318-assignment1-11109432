@@ -26,6 +26,17 @@ class GradeCalculator
             _ => "F"
         };
 
+         string message = letterGrade switch
+        {
+            "A" => "Excellent work! Keep it up!",
+            "B" => "Great job, you're doing well!",
+            "C" => "Good effort, there's room for improvement.",
+            "D" => "You passed, but let's aim higher next time.",
+            _ => "Don't give up, you can improve with more practice!"
+        };
+
         Console.WriteLine($"Letter Grade: {letterGrade}");
+        Console.WriteLine($"Message: {message}");
     }
+
 }
