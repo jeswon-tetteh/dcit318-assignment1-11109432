@@ -15,6 +15,14 @@ class TicketPriceCalculator
         }
 
         decimal ticketPrice = (age <= 12 || age >= 65) ? 7.00m : 10.00m;
+        string discountMessage = age <= 12 ? "Child discount applied (age 12 or below)." :
+                                age >= 65 ? "Senior discount applied (age 65 or above)." :
+                                "No discount applied (standard adult ticket).";
+
         Console.WriteLine($"Ticket Price: GHC{ticketPrice:F2}");
+        Console.WriteLine($"Message: {discountMessage}");
     }
 }
+
+    
+
